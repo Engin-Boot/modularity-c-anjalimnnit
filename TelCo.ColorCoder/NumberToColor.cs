@@ -4,7 +4,8 @@ using System.Drawing;
 
 namespace TelCo.ColorCoder
 {
-    class NumberToColor{
+    class NumberToColor : Colors
+    {
 
          /// <summary>
         /// Given the two colors the function returns the pair number corresponding to them
