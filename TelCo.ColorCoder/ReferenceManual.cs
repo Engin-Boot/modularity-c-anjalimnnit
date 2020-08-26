@@ -9,18 +9,19 @@ namespace TelCo.ColorCoder
     /// <summary>
     /// This class provides the color code manual
     /// </summary>
-    class CodeManual
+    class ReferenceManual
     {
         public override string ToString() //overrides the ToString() in ColorLists
         {
             string colorCodeWithColors = "";
-            for(int pairNumber = 1; pairNumber <= colorMapMinor.Length*colorMapMajor.Length; pairNumber++)
+            for(int pairNo = 1; pairNo<= 25; pairNo++)
             {
-                ColorPair pair = ColorPair.GetColorFromPairNumber(pairNumber);
-                colorCodeWithColors += "Pair Number : " + pairNumber +  "   Colors : " + pair + "\n"; 
+                ColorPair pair = ColorPair.GetColorFromPairNumber(pairNo);
+                colorCodeWithColors = "Pair Number : " + pairNo +  "   Colors : " + pair + "\n"; 
+                Console.WriteLine($"{colorCodeWithColors}");
             }
             
-             return colorCodeWithColors;
+             return "Printed all the colorCodes with major and minor colors";
         }
     }
 }
