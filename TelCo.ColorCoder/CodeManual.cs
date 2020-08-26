@@ -14,7 +14,7 @@ namespace TelCo.ColorCoder
     {
         public override string ToString() //overrides the ToString() in ColorLists
         {
-   
+   return string.Format("MajorColor:{0}, MinorColor:{1}", majorColor.Name, minorColor.Name);
         }
     }
 }
