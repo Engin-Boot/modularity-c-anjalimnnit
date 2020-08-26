@@ -6,7 +6,7 @@ using static TelCo.ColorCoder.ColorPair;
 
 namespace TelCo.ColorCoder
 {
-    class ColorToNumber : Colors
+    class ColorToNumber
     {
 /// <summary>
         /// Given the two colors the function returns the pair number corresponding to them
