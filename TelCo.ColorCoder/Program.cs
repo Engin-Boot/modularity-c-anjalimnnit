@@ -13,13 +13,6 @@ namespace TelCo.ColorCoder
     /// </summary>
     class Program
     {
-       
-        internal class ColorPair
-        {
-            internal Color majorColor;
-            internal Color minorColor;
-           
-        }
         
         /// <summary>
         /// Test code for the class
