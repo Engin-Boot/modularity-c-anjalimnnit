@@ -4,9 +4,9 @@ using System.Drawing;
 using static TelCo.ColorCoder.Colors;
 using static TelCo.ColorCoder.ColorPair;
 
-
-
 namespace TelCo.ColorCoder
+
+class NumberToColor
 {
     /// <summary>
     /// This class provides the mapping of pair number to color 
@@ -42,4 +42,3 @@ namespace TelCo.ColorCoder
             return pair;
         }
     }
-}
