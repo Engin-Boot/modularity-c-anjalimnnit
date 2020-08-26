@@ -14,14 +14,14 @@ namespace TelCo.ColorCoder
         public override string ToString() //overrides the ToString() in ColorLists
         {
             string colorCodeWithColors = "";
-            for(int pairNo = 1; pairNo<= 25; pairNo++)
+            for(int pairNo = 1; pairNo<= colorMapMinor.Length*colorMapMajor.Length; pairNo++)
             {
                 ColorPair pair = ColorPair.GetColorFromPairNumber(pairNo);
-                colorCodeWithColors = "Pair Number : " + pairNo +  "   Colors : " + pair + "\n"; 
-                Console.WriteLine($"{colorCodeWithColors}");
+                colorCodeWithColors += "Pair Number : " + pairNo +  "   Colors : " + pair + "\n"; 
+
             }
             
-             return "Printed all the colorCodes with major and minor colors";
+             return colorCodeWithColors;
         }
     }
 }
