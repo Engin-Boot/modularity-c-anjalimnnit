@@ -1,19 +1,22 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
-using static TelCo.ColorCoder.Colors;
+using static TelCo.ColorCoder.ColorList;
 using static TelCo.ColorCoder.ColorPair;
 
 namespace TelCo.ColorCoder
 {
-    class ColorToNumber
+    /// <summary>
+    /// This class provides the color to pair number.
+    /// </summary>
+    public class PairNumber
     {
-/// <summary>
+        /// <summary>
         /// Given the two colors the function returns the pair number corresponding to them
         /// </summary>
         /// <param name="pair">Color pair with major and minor color</param>
         /// <returns></returns>
-        private static int GetPairNumberFromColor(ColorPair pair)
+        public static int GetPairNumberFromColor(ColorPair pair)
         {
             // Find the major color in the array and get the index
             int majorIndex = -1;
@@ -47,5 +50,5 @@ namespace TelCo.ColorCoder
             // (Note: +1 in compute is because pair number is 1 based, not zero)
             return (majorIndex * colorMapMinor.Length) + (minorIndex + 1);
         }
-}
+    }
 }
