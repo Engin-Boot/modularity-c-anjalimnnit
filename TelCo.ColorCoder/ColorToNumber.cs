@@ -16,9 +16,8 @@ namespace TelCo.ColorCoder
         /// </summary>
         /// <param name="pair">Color pair with major and minor color</param>
         /// <returns></returns>
-        public static int GetPairNumberFromColor(ColorPair pair)
+        public static int GetMajorIndex(ColorPair pair)
         {
-            // Find the major color in the array and get the index
             int majorIndex = -1;
             for (int i = 0; i < colorMapMajor.Length; i++)
             {
@@ -28,8 +27,11 @@ namespace TelCo.ColorCoder
                     break;
                 }
             }
+            return majorIndex;
 
-            // Find the minor color in the array and get the index
+        }
+        public static int GetMinorIndex(ColorPair pair)
+        {
             int minorIndex = -1;
             for (int i = 0; i < colorMapMinor.Length; i++)
             {
@@ -39,6 +41,12 @@ namespace TelCo.ColorCoder
                     break;
                 }
             }
+            return minorIndex;
+        }
+        public static int GetPairNumberFromColor(ColorPair pair)
+    {           int majorIndex= GetMajorIndex(pair);
+                int minorIndex= GetMinorIndex(pair);
+            
             // If colors can not be found throw an exception
             if (majorIndex == -1 || minorIndex == -1)
             {
